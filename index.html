@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>EcoQR</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  background: rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #1b5e20;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.plastico {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.qr {
+  text-align: center;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1b5e20;
+  color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>EcoQR 🌱</h1>
+  <p>Escaneando plásticos para un futuro sostenible</p>
+</header>
+
+<nav>
+  <a href="#problema">Problema</a>
+  <a href="#info">Información</a>
+  <a href="#impacto">Impacto</a>
+</nav>
+
+<section id="problema">
+  <div class="card">
+    <h2>🚨 Problema</h2>
+    <p>Muchos estudiantes no conocen los códigos de los plásticos, lo que genera mala clasificación y contaminación por microplásticos.</p>
+  </div>
+</section>
+
+<section id="info">
+  <h2>♻️ Tipos de Plásticos</h2>
+  <div class="grid">
+    <div class="plastico">PET 🥤</div>
+    <div class="plastico">HDPE 🧴</div>
+    <div class="plastico">PVC ⚠️</div>
+    <div class="plastico">LDPE 🛍️</div>
+    <div class="plastico">PP 🍱</div>
+    <div class="plastico">PS ❌</div>
+    <div class="plastico">Otros 🔄</div>
+  </div>
+
+  <div class="card">
+    <p><b>PVC y PS</b> son los más contaminantes y difíciles de reciclar.</p>
+  </div>
+
+  <button onclick="mensaje()">Consejo ecológico</button>
+</section>
+
+<section id="impacto">
+  <div class="card">
+    <h2>🌍 Impacto</h2>
+    <p>EcoQR ayuda a reducir la contaminación, mejorar el reciclaje y crear conciencia ambiental en la escuela.</p>
+  </div>
+</section>
+
+<section class="qr">
+  <h2>📱 Escanea el QR</h2>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=EcoQR">
+</section>
+
+<footer>
+  <p>Proyecto EcoQR - 2026</p>
+</footer>
+
+<script>
+function mensaje(){
+  alert("Reduce el uso de plásticos y recicla correctamente ♻️");
+}
+</script>
+
+</body>
+</html>
